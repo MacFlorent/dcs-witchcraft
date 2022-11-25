@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
 var port = 3000;
-var io = require('socket.io').listen(app.listen(port, "0.0.0.0"));
+//var io = require('socket.io').listen(app.listen(port, "0.0.0.0"));
+var io = require('socket.io')().listen(app.listen(port, "0.0.0.0"));
+//
 var Q = require('q');
 var net = require('net');
 var events = require('events');
